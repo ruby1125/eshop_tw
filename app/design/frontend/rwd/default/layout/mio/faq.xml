@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<miofaq_faqs_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+		<reference name="content">
+			<block type="miofaq/faqs" name="mio.faqs" template="mio/faq/faqs.phtml"/>
+		</reference>
+	</miofaq_faqs_index>
+</layout>

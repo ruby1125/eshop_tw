@@ -1,0 +1,38 @@
+<?php
+	$faqs = $this->getFaqs();
+?>
+<?php
+	$i=0;
+	foreach($faqs as $faq):
+	$i++;
+?>
+		<h1><?php echo $faq['name']; ?></h1>
+		<div class="panel-group" id="accordion-<?php echo $i ?>" role="tablist" aria-multiselectable="true">
+		<?php
+			$j=0;
+			foreach($faq['data'] as $data):
+			$j++;
+		?>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading<?php echo $i ?>-<?php echo $j ?>">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse"
+							data-parent="#accordion-<?php echo $i ?>" href="#collapse<?php echo $i ?>-<?php echo $j ?>" aria-expanded="true" aria-controls="collapse<?php echo $i ?>-<?php echo $j ?>">
+							<?php echo $data['title']; ?>
+							</a>
+						</h4>
+					</div>
+					<div id="collapse<?php echo $i ?>-<?php echo $j ?>"
+					class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+						<div class="panel-body">
+							<?php echo $data['content']; ?>
+						</div>
+					</div>
+				</div>
+		<?php
+			endforeach;
+		?>
+		</div>
+<?php
+	endforeach;
+?>

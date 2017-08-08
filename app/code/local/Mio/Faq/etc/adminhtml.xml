@@ -1,0 +1,42 @@
+<adminhtml>
+	<menu>
+		<miofaq module="miofaq">
+			<title>FAQ</title>
+			<sort_order>75</sort_order>
+			<children>
+				<miofaq_list>
+					<title>Manage Faq</title>
+					<sort_order>10</sort_order>
+					<action>miofaq/adminhtml_faqs</action>
+				</miofaq_list>
+				<miofaq_category>
+					<title>Manage Faq Category</title>
+					<sort_order>20</sort_order>
+					<action>miofaq/adminhtml_category</action>
+				</miofaq_category>
+			</children>
+		</miofaq>
+	</menu>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<miofaq translate="title" module="miofaq">
+						<title>FAQ</title>
+						<sort_order>75</sort_order>
+						<children>
+							<miofaq_list>
+								<title>Manage Faq</title>
+								<sort_order>10</sort_order>
+							</miofaq_list>
+							<miofaq_category>
+								<title>Manage Faq Category</title>
+								<sort_order>20</sort_order>
+							</miofaq_category>
+						</children>
+					</miofaq>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</adminhtml>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<miofaq_adminhtml_faqs_index>
+		<reference name="content">
+			<block type="miofaq/adminhtml_faqs" name="faqs" />
+		</reference>
+	</miofaq_adminhtml_faqs_index>
+	<miofaq_adminhtml_faqs_edit>
+		<reference name="content">
+			<block type="miofaq/adminhtml_faqs_edit" name="faqs.edit" />
+		</reference>
+		<reference name="left">
+			<block type="miofaq/adminhtml_faqs_edit_tabs" name="faqs.edit.tabs" />
+		</reference>
+	</miofaq_adminhtml_faqs_edit>
+	<miofaq_adminhtml_category_index>
+		<reference name="content">
+			<block type="miofaq/adminhtml_category" name="category" />
+		</reference>
+	</miofaq_adminhtml_category_index>
+	<miofaq_adminhtml_category_edit>
+		<reference name="content">
+			<block type="miofaq/adminhtml_category_edit" name="category.edit" />
+		</reference>
+		<reference name="left">
+			<block type="miofaq/adminhtml_category_edit_tabs" name="category.edit.tabs" />
+		</reference>
+	</miofaq_adminhtml_category_edit>
+</layout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config> 
+	<modules> 
+		<Mio_Product> 
+			<version>1.0.0</version>
+		</Mio_Product>
+	</modules>
+	<global>
+		<blocks> 
+			<mioproduct> 
+				<class>Mio_Product_Block</class> 
+			</mioproduct> 
+		</blocks>
+		<helpers>
+			<mioproduct>
+				<class>Mio_Product_Helper</class>
+			</mioproduct>
+		</helpers>
+	</global>
+</config>

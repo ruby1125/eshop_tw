@@ -1,0 +1,35 @@
+<div class="page-head">
+<h1>常見問題</h1>
+</div>
+<?php
+$faqs = $this->getFaqs();
+?>
+<?php
+$i=0;
+foreach($faqs as $faq):
+$i++;
+?>
+<h2><?php echo $faq['name']; ?></h2>
+<div class="faq-cats" id="faq-cats-<?php echo $i ?>">
+<?php
+$j=0;
+foreach($faq['data'] as $data):
+$j++;
+?>
+<h3 role="button" data-toggle="collapse" href="#collapse<?php echo $i ?>-<?php
+echo $j ?>" aria-expanded="false" aria-controls="collapse<?php echo $i ?>-<?php echo $j
+?>">
+<?php echo $data['title']; ?>
+</h3>
+<div class="collapse" id="collapse<?php echo $i ?>-<?php echo $j ?>">
+<div class="well">
+<?php echo $data['content']; ?>
+</div>
+</div>
+<?php
+endforeach;
+?>
+</div>
+<?php
+endforeach;
+?>
